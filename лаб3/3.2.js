@@ -1,37 +1,35 @@
 class Mark {
-    constructor(subject) {
+    constructor(subject, mark) {
         this.subject = subject;
-        this.marks = []; 
+        this.mark = mark; 
     }
     addmark(mark) {
-        this.marks.push(mark);
+        this.mark.push(mark);
     }
 }
 class Student {
-    constructor(name, lastName) {
+    constructor(name, lastName, marks) {
         this.name = name;
         this.lastName = lastName;
-        this.marksList = [];
+        this.marks = marks;
     } 
     privet() {
         console.log('Привет, я - ' + this.name + ' ' + this.lastName);
     }
     
     addMark(mark) {
-        this.marksList.push(mark);
+        this.marks.push(mark);
     }
 }
 
-const student1 = new Student('Иван', 'Иванов');
+const mark1 = new Mark('Математика', 5);
+const mark2 = new Mark ('Русский язык', 4);
+let Ivanmarks = [mark1, mark2];
 
-const mathMark = new Mark('Математика'); 
-mathMark.addmark(4); 
-student1.addMark(mathMark);
+const studentIvan = new Student("Иван", "Иванов", Ivanmarks );
 
-const rusMark = new Mark ('Русский язык');
-rusMark.addmark(3);
-student1.addMark(rusMark);
+let mark3 = new Mark ('История', 3);
+studentIvan.addMark(mark3);
 
-
-console.log(student1);
-student1.privet();
+console.log(studentIvan);
+studentIvan.privet();
