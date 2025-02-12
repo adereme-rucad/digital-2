@@ -18,7 +18,7 @@ class Student {
     }
     
     addMark(mark) {
-        this.marksList.push(mark); // Метод для добавления оценок
+        this.marksList.push(mark);
     }
 }
 
