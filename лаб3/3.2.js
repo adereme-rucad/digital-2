@@ -23,9 +23,15 @@ class Student {
 }
 
 const student1 = new Student('Иван', 'Иванов');
+
 const mathMark = new Mark('Математика'); 
 mathMark.addmark(4); 
-student1.addMark(mathMark); 
+student1.addMark(mathMark);
+
+const rusMark = new Mark ('Русский язык');
+rusMark.addmark(3);
+student1.addMark(rusMark);
+
 
 console.log(student1);
 student1.privet();
